@@ -1,0 +1,14 @@
+{
+    "name": "ruslan/pm",
+    "description": "PM",
+    "type": "p",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ruslan"
+        }
+    ],
+    "require": {
+        "slim/slim": "3.12"
+    }
+}
