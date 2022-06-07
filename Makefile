@@ -24,6 +24,9 @@ manager-composer-install:
 cli:
 	docker-compose run --rm manager-php-cli php bin/app.php
 
+managet-test:
+	docker-compose run --rm manager-php-cli php bin/phpunit
+
 build-production:
 	docker build --pull --file=manager/docker/production/nginx.docker --tag ${REGISTRY_ADDRESS}/manager-nginx:${IMAGE_TAG} manager
 	docker build --pull --file=manager/docker/production/php-fpm.docker --tag ${REGISTRY_ADDRESS}/manager-php-fpm:${IMAGE_TAG} manager
