@@ -125,7 +125,7 @@
         ]
     },
     "symfony/maker-bundle": {
-        "version": "1.35",
+        "version": "1.11",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "main",
