@@ -10,3 +10,6 @@ docker-compose run --rm manager-php-cli composer install --no-dev
 
 docker-compose run --rm manager-php-cli composer create-project symfony/website-skeleton skeleton
 docker-compose run --rm manager-php-cli composer create-project symfony/website-skeleton="4.2.*" skeleton
+
+
+docker-compose run --rm manager-php-cli php bin/console
