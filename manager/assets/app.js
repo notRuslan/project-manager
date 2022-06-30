@@ -9,9 +9,10 @@
 import './css/app.scss';
 
 // start the Stimulus application
-import './bootstrap';
+// import './bootstrap';
 
-// require('../css/app.css');
+// require('./css/app.scss');
+require('bootstrap');
 
-// require('bootstrap');
 require('@coreui/coreui');
+// import '@coreui/coreui';
