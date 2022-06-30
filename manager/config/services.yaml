@@ -4,6 +4,7 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    locale: 'en'
 
 services:
     # default configuration for services in *this* file
@@ -15,7 +16,7 @@ services:
     # this creates a service per class whose id is the fully-qualified class name
     App\:
         resource: '../src/*'
-        exclude: '../src/{DependencyInjection,Entity,Kernel.php}'
+        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
 
     # controllers are imported separately to make sure services can be injected
     # as action arguments even if you don't extend any base controller class
@@ -35,7 +36,7 @@ services:
 
     App\Model\User\Service\ResetTokenizer:
         factory: 'App\Container\Model\User\Service\ResetTokenizerFactory:create'
-        arguments: [ 'PT1H' ]
+        arguments: ['PT1H']
 
     Predis\Client:
         arguments:
@@ -47,4 +48,4 @@ services:
 
     App\Widget\:
         resource: '../src/Widget'
-        tags: [ 'twig.extension' ]
+        tags: ['twig.extension']
