@@ -22,9 +22,9 @@ class ShowController extends AbstractController
      * @Route("/profile", name="profile")
      * @return Response
      */
-    public function index(): Response
+    public function show(): Response
     {
-        $user = $this->users->findDetail($this->getUser()->getId());
+        $user = $this->users->getDetail($this->getUser()->getId());
 
         return $this->render('app/profile/show.html.twig', compact('user'));
     }
