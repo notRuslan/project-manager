@@ -33,11 +33,22 @@ class UserFixture extends Fixture
             'token'
         );
 
+
+
         $user->confirmSignUp();
-
         $user->changeRole(Role::admin());
-
         $manager->persist($user);
+
+        $user1 = User::signUpByEmail(
+            Id::next(),
+            new \DateTimeImmutable(),
+            new Name('User', 'Bond'),
+            new Email('user@app.test'),
+            $hash,
+            'token'
+        );
+        $user1->confirmSignUp();
+
 
         $manager->flush();
     }
