@@ -48,7 +48,7 @@ class UserFixture extends Fixture
             'token'
         );
         $user1->confirmSignUp();
-
+        $manager->persist($user1);
 
         $manager->flush();
     }
