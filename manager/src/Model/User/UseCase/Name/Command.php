@@ -37,5 +37,4 @@ class Command
         $command->lastName = $user->getName()->getLast();
         return $command;
     }
-
 }
