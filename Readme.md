@@ -13,3 +13,8 @@ docker-compose run --rm manager-php-cli composer create-project symfony/website-
 
 
 docker-compose run --rm manager-php-cli php bin/console
+
+
+#### Tests
+docker-compose run --rm manager-php-cli php bin/phpunit --testsuite=unit
+
